@@ -145,6 +145,7 @@
             this.listBoxlevels.Name = "listBoxlevels";
             this.listBoxlevels.Size = new System.Drawing.Size(91, 69);
             this.listBoxlevels.TabIndex = 4;
+            this.listBoxlevels.SelectedIndexChanged += new System.EventHandler(this.listBoxlevels_SelectedIndexChanged);
             // 
             // FormAirDrom
             // 
