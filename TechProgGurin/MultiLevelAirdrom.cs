@@ -9,7 +9,7 @@ namespace TechProgGurin
     class MultiLevelAirdrom
     {
         /// <summary>
-        /// Список с уровнями в порту
+        /// Список с уровнями в аэропорту
         /// </summary>
         List<Port<IAir>> bandStages;
         /// <summary>
@@ -19,7 +19,7 @@ namespace TechProgGurin
         /// <summary>
         /// Конструктор
         /// </summary>
-        /// <param name="countStages">Количество уровенй в порту</param>
+        /// <param name="countStages">Количество уровенй в аэропорту</param>
         /// <param name="pictureWidth"></param>
         /// <param name="pictureHeight"></param>
         public MultiLevelAirdrom(int countStages, int pictureWidth, int pictureHeight)

@@ -47,7 +47,7 @@ namespace TechProgGurin
                 pictureBoxAirdrom.Image = bmp;
             }
         }
-        /// Обработка нажатия кнопки "Пришвартовать лодку"
+        /// Обработка нажатия кнопки "Посадить самолет"
         private void buttonLocateAir_Click(object sender, EventArgs e)
         {
             if (listBoxlevels.SelectedIndex > -1)
@@ -66,7 +66,7 @@ namespace TechProgGurin
                 }
             }
         }
-        /// Обработка нажатия кнопки "Пришвартовать катер"
+        /// Обработка нажатия кнопки "Посадить аэробус"
         private void buttonLocateAirbus_Click(object sender, EventArgs e)
         {
             if (listBoxlevels.SelectedIndex > -1)
