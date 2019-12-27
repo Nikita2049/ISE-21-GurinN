@@ -16,7 +16,7 @@ namespace TechProgGurin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AirForm());
+            Application.Run(new FormAirDrom());
         }
     }
 }
