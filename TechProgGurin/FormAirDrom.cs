@@ -13,9 +13,10 @@ namespace TechProgGurin
     public partial class FormAirDrom : Form
     {
         /// <summary>
-        /// Объект от класса многоуровневого порта
+        /// Объект от класса многоуровневой порта
         /// </summary>
-        MultiLevelAirdrom band;
+        MultiLevelAirdrom parking;
+        FormAirConfig form;
         /// <summary>
         /// Количество уровней-парковок
         /// </summary>
@@ -23,8 +24,8 @@ namespace TechProgGurin
         public FormAirDrom()
         {
             InitializeComponent();
-            band = new MultiLevelAirdrom(countLevel, pictureBoxAirdrom.Width,
-           pictureBoxAirdrom.Height);
+            parking = new MultiLevelAirdrom(countLevel, pictureBoxPort.Width,
+           pictureBoxPort.Height);
             //заполнение listBox
             for (int i = 0; i < countLevel; i++)
             {
@@ -40,64 +41,44 @@ namespace TechProgGurin
             if (listBoxlevels.SelectedIndex > -1)
             {
                 //если выбран один из пуктов в listBox (при старте программы ни один пункт не будет выбран и может возникнуть ошибка, если мы попытаемся обратиться к элементу listBox)
-                Bitmap bmp = new Bitmap(pictureBoxAirdrom.Width,
-               pictureBoxAirdrom.Height);
+                Bitmap bmp = new Bitmap(pictureBoxPort.Width,
+               pictureBoxPort.Height);
                 Graphics gr = Graphics.FromImage(bmp);
-                band[listBoxlevels.SelectedIndex].Draw(gr);
-                pictureBoxAirdrom.Image = bmp;
+                parking[listBoxlevels.SelectedIndex].Draw(gr);
+                pictureBoxPort.Image = bmp;
             }
         }
-        /// Обработка нажатия кнопки "Пришвартовать лодку"
-        private void buttonLocateAir_Click(object sender, EventArgs e)
+
+        private void AddAir(IAir air)
         {
-            if (listBoxlevels.SelectedIndex > -1)
+            if (air != null && listBoxlevels.SelectedIndex > -1)
             {
-                ColorDialog dialog = new ColorDialog();
-                if (dialog.ShowDialog() == DialogResult.OK)
+                int place = parking[listBoxlevels.SelectedIndex] + air;
+                if (place > -1)
                 {
-                    var air = new Air(100, 1000, dialog.Color);
-                    int place = band[listBoxlevels.SelectedIndex] + air;
-                    if (place == -1)
-                    {
-                        MessageBox.Show("Нет свободных мест", "Ошибка",
-                       MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
                     Draw();
                 }
-            }
-        }
-        /// Обработка нажатия кнопки "Пришвартовать катер"
-        private void buttonLocateAirbus_Click(object sender, EventArgs e)
-        {
-            if (listBoxlevels.SelectedIndex > -1)
-            {
-                ColorDialog dialog = new ColorDialog();
-                if (dialog.ShowDialog() == DialogResult.OK)
+                else
                 {
-                    ColorDialog dialogDop = new ColorDialog();
-                    if (dialogDop.ShowDialog() == DialogResult.OK)
-                    {
-                        var air = new SuperAir(100, 1000, dialog.Color,
-                       dialogDop.Color, true, 2);
-                        int place = band[listBoxlevels.SelectedIndex] + air;
-                        if (place == -1)
-                        {
-                            MessageBox.Show("Нет свободных мест", "Ошибка",
-                           MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        Draw();
-                    }
+                    MessageBox.Show("Cамолет не удалось поставить");
                 }
             }
         }
-        /// Обработка нажатия кнопки "Забрать"
-        private void buttonGetAir_Click(object sender, EventArgs e)
+
+        private void buttonSetAir_Click(object sender, EventArgs e)
+        {
+            form = new FormAirConfig();
+            form.AddEvent(AddAir);
+            form.Show();
+        }
+
+        private void buttonGetShip_Click(object sender, EventArgs e)
         {
             if (listBoxlevels.SelectedIndex > -1)
             {
                 if (maskedTextBoxSpot.Text != "")
                 {
-                    var air = band[listBoxlevels.SelectedIndex] -
+                    var air = parking[listBoxlevels.SelectedIndex] -
                    Convert.ToInt32(maskedTextBoxSpot.Text);
                     if (air != null)
                     {
@@ -119,6 +100,7 @@ namespace TechProgGurin
                 }
             }
         }
+
         private void listBoxlevels_SelectedIndexChanged(object sender, EventArgs e)
         {
             Draw();

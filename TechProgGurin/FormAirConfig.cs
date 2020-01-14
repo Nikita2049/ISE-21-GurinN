@@ -76,7 +76,7 @@ DragDropEffects.Copy);
             }
         }
 
-        private void panelShip_DragDrop(object sender, DragEventArgs e)
+        private void panelAir_DragDrop(object sender, DragEventArgs e)
         {
             switch (e.Data.GetData(DataFormats.Text).ToString())
             {
@@ -84,7 +84,7 @@ DragDropEffects.Copy);
                     air = new Air(100, 500, Color.White);
                     break;
                 case "Аэробус":
-                    air = new SuperAir(100, 500, Color.White, Color.Black, true, true, 3);
+                    air = new SuperAir(100, 500, Color.White, Color.Black, true, 3);
                     break;
             }
             DrawAir();
@@ -126,6 +126,7 @@ DragDropEffects.Copy);
                 {
                     (air as SuperAir).SetDopColor((Color)e.Data.GetData(typeof(Color)));
                     DrawAir();
+
                 }
             }
         }
