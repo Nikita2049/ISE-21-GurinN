@@ -13,7 +13,7 @@ namespace TechProgGurin
     public partial class FormAirDrom : Form
     {
         /// <summary>
-        /// Объект от класса многоуровневой полосы
+        /// Объект от класса многоуровневой порта
         /// </summary>
         MultiLevelAirdrom parking;
         FormAirConfig form;
@@ -34,7 +34,7 @@ namespace TechProgGurin
             listBoxlevels.SelectedIndex = 0;
         }
         /// <summary>
-        /// Метод отрисовки полосы
+        /// Метод отрисовки порта
         /// </summary>
         private void Draw()
         {

@@ -60,8 +60,7 @@ namespace TechProgGurin
 
         private void labelAirbus_MouseDown(object sender, MouseEventArgs e)
         {
-            labelAirbus.DoDragDrop(labelAirbus.Text, DragDropEffects.Move |
-DragDropEffects.Copy);
+            labelAirbus.DoDragDrop(labelAirbus.Text, DragDropEffects.Move | DragDropEffects.Copy);
         }
 
         private void panelAir_DragEnter(object sender, DragEventArgs e)
