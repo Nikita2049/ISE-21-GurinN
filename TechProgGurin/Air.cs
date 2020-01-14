@@ -9,23 +9,39 @@ namespace TechProgGurin
 {
     public class Air : Vehicle
     {
-        /// Ширина отрисовки самолета
+        /// Ширина отрисовки катера
         /// </summary>
-        protected const int airWidth = 90;
+        protected const int airWidth = 150;
         /// <summary>
-        /// Ширина отрисовки самолета
+        /// Ширина отрисовки катера
         /// </summary>
-        protected const int airHeight = 1;
+        protected const int airHeight = 10;
         /// <summary>
-        /// Максимальная скорость
+        /// Конструктор
         /// </summary>
-        public Air(int maxSpeed, float weight, Color mainColor)
+        /// <param name="maxSpeed">Максимальная скорость</param>
+        /// <param name="weight">Вес катера</param>
+        /// <param name="bottomColor">Основной цвет - цвет ватерлини</param>       
+        public Air(int maxSpeed, float weight, Color bottomColor)
         {
             MaxSpeed = maxSpeed;
             Weight = weight;
-            MainColor = mainColor;
+            MainColor = bottomColor;
         }
-
+        public Air(string info)
+        {
+            string[] strs = info.Split(';');
+            if (strs.Length == 3)
+            {
+                MaxSpeed = Convert.ToInt32(strs[0]);
+                Weight = Convert.ToInt32(strs[1]);
+                MainColor = Color.FromName(strs[2]);
+            }
+        }
+        /// <summary>
+        /// Изменение направления перемещения
+        /// <param name="direction">Направление</param>
+        /// </summary>
         public override void MoveTransport(Direction direction)
         {
             int k = 30;
@@ -64,7 +80,7 @@ namespace TechProgGurin
             }
         }
         /// <summary>
-        /// Отрисовка самолета
+        /// Отрисовка катера
         /// </summary>
         /// <param name="g"></param>
         public override void DrawAir(Graphics g)
@@ -129,6 +145,10 @@ namespace TechProgGurin
             g.FillEllipse(brBlack, _startPosX + 105, _startPosY + 22, 7, 7);
             g.FillEllipse(brBlack, _startPosX + 18, _startPosY + 22, 7, 7);
             g.FillEllipse(brBlack, _startPosX + 23, _startPosY + 22, 7, 7);
+        }
+        public override string ToString()
+        {
+            return MaxSpeed + ";" + Weight + ";" + MainColor.Name;
         }
     }
 }
