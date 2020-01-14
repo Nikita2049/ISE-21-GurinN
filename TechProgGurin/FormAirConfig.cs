@@ -114,7 +114,6 @@ namespace TechProgGurin
                 air.SetMainColor((Color)e.Data.GetData(typeof(Color)));
                 DrawAir();
             }
-
         }
 
         private void labelDopColor_DragDrop(object sender, DragEventArgs e)
@@ -125,7 +124,6 @@ namespace TechProgGurin
                 {
                     (air as SuperAir).SetDopColor((Color)e.Data.GetData(typeof(Color)));
                     DrawAir();
-
                 }
             }
         }

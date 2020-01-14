@@ -13,7 +13,6 @@ namespace TechProgGurin
     public partial class AirForm : Form
     {
         private IAir air;
-
         public AirForm()
         {
             InitializeComponent();
@@ -59,7 +58,6 @@ namespace TechProgGurin
             }
             Draw();
         }
-
         private void buttonCreateAir_Click(object sender, EventArgs e)
         {
             int minpos = 47;

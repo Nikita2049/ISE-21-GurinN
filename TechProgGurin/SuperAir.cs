@@ -72,10 +72,15 @@ namespace TechProgGurin
             g.FillEllipse(dop, _startPosX + 90, _startPosY - 5, 7, 7);
             g.DrawEllipse(pen, _startPosX + 90, _startPosY - 5, 7, 7);
         }
+        
         public void SetDopColor(Color color)
         {
             DopColor = color;
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + ";" + DopColor.Name + ";" + Board + ";" + Turbines;
+        }
     }
 }
-
