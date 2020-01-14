@@ -55,6 +55,12 @@
     <Compile Include="AirForm.Designer.cs">
       <DependentUpon>AirForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAirConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAirConfig.Designer.cs">
+      <DependentUpon>FormAirConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAirDrom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <Compile Include="Vehicle.cs" />
     <EmbeddedResource Include="AirForm.resx">
       <DependentUpon>AirForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAirConfig.resx">
+      <DependentUpon>FormAirConfig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAirDrom.resx">
       <DependentUpon>FormAirDrom.cs</DependentUpon>
