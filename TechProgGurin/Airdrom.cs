@@ -32,7 +32,7 @@ namespace TechProgGurin
         /// <summary>
         /// Размер парковочного места (высота)
         /// </summary>
-        private const int _placeSizeHeight = 80;
+        private const int _placeSizeHeight = 85;
         /// <summary>
         /// Конструктор
         /// </summary>
