@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TechProgGurin
 {
-    public partial class FormAirDrom : Form
+    public partial class FormAirdrom : Form
     {
         /// <summary>
         /// Объект от класса многоуровневой порта
@@ -21,7 +21,7 @@ namespace TechProgGurin
         /// Количество уровней-парковок
         /// </summary>
         private const int countLevel = 5;
-        public FormAirDrom()
+        public FormAirdrom()
         {
             InitializeComponent();
             parking = new MultiLevelAirdrom(countLevel, pictureBoxPort.Width,

@@ -84,7 +84,7 @@
             this.labelAirbus.Size = new System.Drawing.Size(58, 19);
             this.labelAirbus.TabIndex = 1;
             this.labelAirbus.Text = "Аэробус";
-            this.labelAirbus.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelAir_MouseDown);
+            this.labelAirbus.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelAirbus_MouseDown);
             // 
             // labelAir
             // 
@@ -119,9 +119,9 @@
             this.labelDopColor.Location = new System.Drawing.Point(46, 166);
             this.labelDopColor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDopColor.Name = "labelDopColor";
-            this.labelDopColor.Size = new System.Drawing.Size(97, 40);
+            this.labelDopColor.Size = new System.Drawing.Size(85, 40);
             this.labelDopColor.TabIndex = 2;
-            this.labelDopColor.Text = "Дополнительный цвет";
+            this.labelDopColor.Text = "Доп. цвет";
             this.labelDopColor.DragDrop += new System.Windows.Forms.DragEventHandler(this.labelDopColor_DragDrop);
             this.labelDopColor.DragEnter += new System.Windows.Forms.DragEventHandler(this.labelDopColor_DragEnter);
             // 
@@ -132,7 +132,7 @@
             this.labelBaseColor.Location = new System.Drawing.Point(46, 116);
             this.labelBaseColor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelBaseColor.Name = "labelBaseColor";
-            this.labelBaseColor.Size = new System.Drawing.Size(97, 36);
+            this.labelBaseColor.Size = new System.Drawing.Size(83, 36);
             this.labelBaseColor.TabIndex = 1;
             this.labelBaseColor.Text = "Основной цвет";
             this.labelBaseColor.DragDrop += new System.Windows.Forms.DragEventHandler(this.labelBaseColor_DragDrop);
@@ -260,6 +260,7 @@
             // 
             // FormAirConfig
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);

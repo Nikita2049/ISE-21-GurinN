@@ -1,6 +1,6 @@
 ﻿namespace TechProgGurin
 {
-    partial class FormAirDrom
+    partial class FormAirdrom
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,6 @@
         {
             this.pictureBoxPort = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBoxTake = new System.Windows.Forms.PictureBox();
             this.buttonGetAir = new System.Windows.Forms.Button();
@@ -54,28 +53,18 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.pictureBoxTake);
             this.groupBox1.Controls.Add(this.buttonGetAir);
             this.groupBox1.Controls.Add(this.maskedTextBoxSpot);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(708, 194);
+            this.groupBox1.Location = new System.Drawing.Point(723, 193);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(180, 205);
+            this.groupBox1.Size = new System.Drawing.Size(171, 205);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 24);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
-            this.label3.TabIndex = 5;
             // 
             // label2
             // 
@@ -98,10 +87,10 @@
             // 
             // buttonGetAir
             // 
-            this.buttonGetAir.Location = new System.Drawing.Point(40, 55);
-            this.buttonGetAir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonGetAir.Location = new System.Drawing.Point(36, 55);
+            this.buttonGetAir.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGetAir.Name = "buttonGetAir";
-            this.buttonGetAir.Size = new System.Drawing.Size(56, 27);
+            this.buttonGetAir.Size = new System.Drawing.Size(60, 27);
             this.buttonGetAir.TabIndex = 2;
             this.buttonGetAir.Text = "Забрать";
             this.buttonGetAir.UseVisualStyleBackColor = true;
@@ -109,7 +98,7 @@
             // 
             // maskedTextBoxSpot
             // 
-            this.maskedTextBoxSpot.Location = new System.Drawing.Point(112, 37);
+            this.maskedTextBoxSpot.Location = new System.Drawing.Point(112, 34);
             this.maskedTextBoxSpot.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextBoxSpot.Name = "maskedTextBoxSpot";
             this.maskedTextBoxSpot.Size = new System.Drawing.Size(38, 20);
@@ -128,25 +117,25 @@
             // listBoxlevels
             // 
             this.listBoxlevels.FormattingEnabled = true;
-            this.listBoxlevels.Location = new System.Drawing.Point(730, 10);
+            this.listBoxlevels.Location = new System.Drawing.Point(788, 10);
             this.listBoxlevels.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxlevels.Name = "listBoxlevels";
-            this.listBoxlevels.Size = new System.Drawing.Size(149, 82);
+            this.listBoxlevels.Size = new System.Drawing.Size(91, 69);
             this.listBoxlevels.TabIndex = 4;
             this.listBoxlevels.SelectedIndexChanged += new System.EventHandler(this.listBoxlevels_SelectedIndexChanged);
             // 
             // buttonSetAir
             // 
-            this.buttonSetAir.Location = new System.Drawing.Point(760, 112);
+            this.buttonSetAir.Location = new System.Drawing.Point(772, 134);
             this.buttonSetAir.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSetAir.Name = "buttonSetAir";
-            this.buttonSetAir.Size = new System.Drawing.Size(107, 55);
+            this.buttonSetAir.Size = new System.Drawing.Size(106, 31);
             this.buttonSetAir.TabIndex = 5;
             this.buttonSetAir.Text = "Заказать самолет";
             this.buttonSetAir.UseVisualStyleBackColor = true;
             this.buttonSetAir.Click += new System.EventHandler(this.buttonSetAir_Click);
             // 
-            // FormAirDrom
+            // FormAirdrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -156,8 +145,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBoxPort);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FormAirDrom";
-            this.Text = "FormAirDrom";
+            this.Name = "FormAirdrom";
+            this.Text = "FormAirdrom";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPort)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -175,7 +164,6 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBoxSpot;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listBoxlevels;
         private System.Windows.Forms.Button buttonSetAir;
     }
