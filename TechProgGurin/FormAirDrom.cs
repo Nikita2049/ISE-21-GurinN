@@ -49,7 +49,7 @@ namespace TechProgGurin
             }
         }
 
-        private void AddAir(IAir air)
+        private void AddShip(IAir air)
         {
             if (air != null && listBoxlevels.SelectedIndex > -1)
             {
@@ -68,7 +68,7 @@ namespace TechProgGurin
         private void buttonSetAir_Click(object sender, EventArgs e)
         {
             form = new FormAirConfig();
-            form.AddEvent(AddAir);
+            form.AddEvent(AddShip);
             form.Show();
         }
 
